@@ -1,0 +1,159 @@
+.row {
+    justify-content: center;
+}
+
+.wp-caption .wp-caption-text-top {
+    text-align: center;
+}
+
+.wp-caption .wp-caption-text-bottom {
+    text-align: center;
+}
+
+.card {
+    min-width: 160px;
+}
+
+.grid {
+    height: 300px;
+}
+
+.grid img {
+    height: 100%;
+}
+
+.bg-cover {
+    background-size    : cover;
+    background-position: center center;
+    background-repeat  : no-repeat;
+    height             : 300px
+}
+
+
+.wp-caption {
+
+    position: relative;
+    margin  : 0;
+
+}
+
+.wp-caption img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+.wp-caption-text-top {
+
+    font-size: 4vw;
+
+    font-family: Impact;
+
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+    display: block;
+
+    position: absolute;
+
+    width: 100%;
+
+    color: #fff;
+
+    left: 0;
+
+    padding: .5em;
+
+    font-weight: 700;
+
+    z-index: 2;
+
+    -webkit-box-sizing : border-box;
+    box-sizing         : border-box;
+    -webkit-text-stroke: 1.5px black;
+    paint-order        : stroke fill;
+}
+
+.wp-caption-text-bottom {
+
+    font-size: 4vw;
+
+    font-family: Impact;
+
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    display: block;
+
+    position: absolute;
+
+    width: 100%;
+
+    color: #fff;
+
+    left: 0;
+
+    bottom: 0;
+
+    padding: .25em;
+
+    font-weight: 700;
+
+    z-index: 2;
+
+    -webkit-box-sizing : border-box;
+    box-sizing         : border-box;
+    -webkit-text-stroke: 1.5px black;
+    paint-order        : stroke fill;
+}
+
+
+@media (max-width: 992px) {
+
+    .wp-caption-text-bottom {
+        font-size: 7vw;
+    }
+
+    .wp-caption-text-top {
+        font-size: 7vw;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .wp-caption-text-top {
+        font-size: 56.5px;
+
+    }
+
+    .wp-caption-text-bottom {
+        font-size: 56.5px;
+    }
+}
+
+@media print {
+
+    /* All your print styles go here */
+    #navbar,
+    #cards,
+    .featurette-divider,
+    footer,
+    .col-lg-4,
+    #pre-footer,
+    h1 {
+        display: none !important;
+    }
+
+    * {
+        font-size: 4vw;
+    }
+
+    canvas {
+        display: block !important;
+    }
+}

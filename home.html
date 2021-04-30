@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="css/style2.css">
+
+    <title>Meme Generator</title>
+</head>
+
+<body>
+
+<!-- Navbar  -->
+<div id="navbar"
+     class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+     id="nav">
+    <h5 class="my-0 mr-md-auto font-weight-normal">CS601 Meme Generator</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+    </nav>
+    <a id="print" class="btn btn-outline-primary" href="#">Share</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1 id="meme-name">Meme Name</h1>
+    </div>
+    <div class="row">
+        <!-- Image section  -->
+        <div id="printArea" class=" col-lg-8 col-md-8">
+            <div class="row">
+                <figure class="wp-caption">
+                    <figcaption class="wp-caption-text-top" id="top-caption">This is a top caption
+                    </figcaption>
+                    <img id="mainImage" class="figure-img img-fluid rounded" src="images/Doge-meme-template.jpg"
+                         alt="Image"/>
+                    <figcaption class="wp-caption-text-bottom" id="bottom-caption">This is a bottom caption
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="topText">Top Text</label>
+                    <input type="text" class="form-control" id="topText" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="bottomText">Bottom Text</label>
+                    <input type="text" class="form-control" id="bottomText" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="fontBigger">Font Size</label>
+                    <br>
+                    <input class="btn btn-primary btn-md" id="fontBigger" type="button" value="Bigger">
+                    <input class="btn btn-primary btn-md" id="fontSmaller" type="button" value="Smaller">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Meme Options   -->
+<div id="cards" class="container">
+    <div class="card-deck mb-4 text-center">
+        <div class="card mb-5 shadow-sm" id="dogeMeme">
+            <div class="card-header">Doge</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/Doge-meme-template.jpg" alt="Doge Meme">
+            </div>
+        </div>
+
+        <div class="card mb-5 shadow-sm" id="badLuckMeme">
+            <div class="card-header">Bad Luck Brian</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/Bad_Luck_Brian.jpg" alt="Doge Meme">
+            </div>
+        </div>
+
+        <div class="card mb-5 shadow-sm" id="oneNotSimply">
+            <div class="card-header">One Does Not Simply</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/One-Does-Not-Simply.jpg"
+                     alt="One does not simply">
+            </div>
+        </div>
+
+        <div class="card mb-5 shadow-sm" id="ancientAliens">
+            <div class="card-header">Ancient Aliens</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/Ancient-Aliens.jpg" alt="Ancient Aliens">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="successKid">
+            <div class="card-header">Success Kid</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/Success-Kid.jpg" alt="Success Kid Meme">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="notSureIf">
+            <div class="card-header">Not sure if</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/NOTSUREIF.jpg" alt="Not Sure if Fry Meme">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="keanu">
+            <div class="card-header">Conspiracy Keanu</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/conspiracykeanu.jpg"
+                     alt="Conspiracy Keanu Meme">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="businessCat">
+            <div class="card-header">Business Cat</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/business-cat.jpg" alt="Business Cat Meme">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="billGates">
+            <div class="card-header">Bill Gates</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/bill-gates.jpg" alt="Bill Gates Meme">
+            </div>
+        </div>
+        <div class="card mb-5 shadow-sm" id="catNewspaper">
+            <div class="card-header">Cat with newspaper</div>
+            <div class="card-body">
+                <img class="figure-img img-fluid rounded" src="images/cat-newspaper.jpg"
+                     alt="Cat With Newspaper Meme">
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+<div id="pre-footer" class="container">
+    <!-- Right section  -->
+    <div class="row">
+        <!-- File Upload  -->
+        <div class="form-group">
+            <label for="imgUpload">Use your own file</label>
+            <input type="file" class="form-control-file" id="imgUpload" accept="image/jpeg">
+            <br>
+            <input class="btn btn-primary btn-sm" id="imgSubmit" type="button" value="Submit">
+        </div>
+    </div>
+</div>
+<hr class="featurette-divider">
+</body>
+
+<!-- Footer  -->
+<footer class="container">
+    Luther Richardson<br>CS 601 Final Project<br>Fall 2020
+</footer>
